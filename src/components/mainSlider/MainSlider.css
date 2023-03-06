@@ -1,0 +1,40 @@
+.mainSlider{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+}
+.slideImage{
+    width: 100%;
+}
+.sliderContent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-start;
+    gap:20px;
+    color: #fff;
+    margin-left: 10%;
+
+    
+}
+.sliderContent h1{
+    font-size: 80px;
+    text-transform: uppercase;
+
+}
+.sliderContent p{
+    font-size: 17px;
+    line-height: 25px;
+
+}
+.sliderContent button{
+    border: none;
+    outline: none;
+    width: fit-content;
+    padding: 5px 20px;
+    background-color: #FF9800;
+    text-transform: uppercase;
+    color: #fff;
+}

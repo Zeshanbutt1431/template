@@ -1,0 +1,119 @@
+.topheader {
+    background-color: #FF9800;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-expand-lg .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    border:none;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu a{
+    color: #9A9A9A;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu a:hover{
+    background-color: #FF9800;
+    color: #fff;
+
+}
+
+
+
+.navbar-expand-lg .navbar-nav .dropdown-menu .sub-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+}
+.topheader .nav-link {
+   color: #fff;
+   padding: 2px;
+   font-size: 12px;
+}
+.topheader .nav-link:hover {
+    color:#000
+}
+.topheader .nav-link::after {
+   display: none;
+}
+
+.topheader .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.topheader .navbar-links span {
+    position: relative !important;
+    font-size: 12px;
+    padding: 8px 17px;
+    color: #fff;
+    cursor: pointer;
+position: relative;
+    transition: all ease-in-out .3s;
+}
+
+.topheader span:hover {
+    color: #000;
+
+}
+.topheader span:hover .nav-menu {
+    display: flex;
+}
+
+.nav-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    top: 35px;
+    left: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(140, 138, 138, 0.75);
+
+
+}
+
+.nav-menu span {
+    color: #000 !important;
+    width: 100%;
+    transition: all ease-in-out 1s;
+
+
+}
+
+.nav-menu span:hover {
+    color: #fff !important;
+    background-color: #FF9800;
+    
+
+}
+.nav-submenu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FF9800;
+}
