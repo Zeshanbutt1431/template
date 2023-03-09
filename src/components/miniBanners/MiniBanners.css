@@ -1,0 +1,4 @@
+.minibanners{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,53 +1,27 @@
 import './Home.css'
-import MainSlider from '../../components/mainSlider/MainSlider'
-// import Slide from '../../components/slide/Slide'
-import { sliders } from '../../data'
-import Slider from "react-slick";
 import Header from '../../components/header/Header';
-// import {BiTargetLock} from 'react-icons/bi';
-// import icon from
+import MainSliders from '../../components/mainSliders/MainSliders';
+import Brands from '../../components/brands/Brands';
+import MiniBanners from '../../components/miniBanners/MiniBanners';
+import FeaturedProducts from '../../components/featuredProducts/FeaturedProducts';
+import Deals from '../../components/deals/Deals';
+import Deals2 from '../../components/deals2/Deals2';
+import News from '../../components/news/News';
+import Services from '../../components/services/Services';
 
-
-const Home = () => {
-  const sliderIcons = [
-    {
-      img: "assets/images/active.svg",
-      id:1
-    },
-    {
-      img: "assets/images/non-active.svg",
-      id:2
-    }
-
-  ]
-  const settings = {
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    speed: 500,
-    arrows: true,
-    adaptiveHeight: true,
-    appendDots: dots => <ul className='slider-icons'>{sliderIcons.map(n => <img src={n.img} /> )}</ul>,
-    customPaging: i => (
-      <div className="ft-slick__dots--custom">
-        <div className="loading" />
-      </div>
-    )
-  };
-
+const Home = (heading) => {
   return (
     <div className='home'>
       <Header/>
-      <Slider {...settings} >
-        {sliders.map(slide => (
-          <MainSlider slide={slide} key={slide.id} {...slide} />
-        ))}
-
-      </Slider>
+      <MainSliders/>
+      <Brands/>
+      <MiniBanners/>
+      <FeaturedProducts  heading={"Featured Products"}/>
+      <Deals/>
+      <FeaturedProducts heading={"Top selling"}/>
+      <Deals2/>
+      <News/>
+      <Services/>
     </div>
   )
 }

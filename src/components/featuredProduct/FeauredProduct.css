@@ -1,0 +1,86 @@
+
+.featuredproduct{
+    height: 445px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 296px;
+}
+.featured-img-container{
+    width: 295px;
+    height: 295px;
+    background-color: #717171;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.new{
+    text-transform: uppercase;
+    background-color: #FF9800;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.featured-name-price{
+    display: flex;
+    color: #717171;
+    font-size: 17px;
+    width: 100%;
+    text-transform: uppercase;
+
+}
+.featured-name-price p{
+    flex: 2;
+}
+.featured-name-price span{
+    flex: 1;
+    font-weight: 800;
+    color: #000;
+    text-align: right;
+}
+.featured-rating{
+    display: flex;
+    gap: 2px;
+}
+.featured-product-action{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: 10px;
+}
+.featured-cart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF9800;
+    color: #fff;
+    font-size: 20px;
+}
+.featured-heart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBEAEA;
+    color: #575757;
+    font-size: 20px;
+}
+.featured-heart:hover{
+    background-color: #575757;
+    color: #fff;
+}
+.featured-cart:hover{
+    background-color: #575757;
+    color: #fff;
+}
+.star-icon{
+    color: #FF9800;
+}

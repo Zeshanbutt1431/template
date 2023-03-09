@@ -1,0 +1,16 @@
+.brand{
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    background-color: #fff;
+    filter:  grayscale(100%);
+    opacity: 0.9;
+}
+.brand:hover{
+    filter: none;
+    opacity: 1;
+    transition: all ease 0.2s;
+
+}
