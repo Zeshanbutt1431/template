@@ -1,0 +1,68 @@
+.cart-popup {
+    background-color: #fff;
+    width: 350px;
+    height: 380px;
+    padding: 5px 15px;
+    box-shadow: -2px 3px 5px 0px rgba(158, 148, 148, 0.75);
+    -webkit-box-shadow: -2px 3px 5px 0px rgba(158, 148, 148, 0.75);
+    -moz-box-shadow: -2px 3px 5px 0px rgba(158, 148, 148, 0.75);
+    position: absolute;
+    z-index: 2;
+    top: 62px;
+    right: 0;
+}
+.cart-popup-product{
+    display: flex;
+}
+.cart-popup-img{
+     flex: 2;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.cart-popup-img img{
+    width: 85px;
+    height: 85px;
+   
+}
+.cart-prod-name{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cart-popup-prod-detail{
+    flex: 3;
+    text-transform: capitalize;
+    color: #717171;
+}
+.cart-popup-prod-detail .price{
+    font-weight: 400;
+    font-size: 15px;
+}
+.cart-popup-remove{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+.cart-popup-subtotal h5{
+    font-weight: 700;
+}
+.cart-popup-subtotal{
+    margin: 20px 0;
+}
+.cart-popup-actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.cart-popup-actions button{
+    border: none;
+    text-transform: uppercase;
+    padding: 7px 30px;
+    background-color: #FF9800;
+    color: #fff;
+
+}
