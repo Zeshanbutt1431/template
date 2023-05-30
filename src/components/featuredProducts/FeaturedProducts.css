@@ -17,9 +17,10 @@
 .slider-buttons{
     display: flex;
     gap: 5px;
+   
 }
 .slider-buttons button{
-    background-color: transparent;
     border: none;
+    background: transparent;
     outline: none;
 }

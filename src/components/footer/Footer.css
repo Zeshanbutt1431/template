@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .footer{
-    padding: 60px 0;
+    padding: 60px 0 !important;
     display: flex;
     width: 90%;
 
@@ -19,7 +19,7 @@
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
 }
 .footer-menu{
     display: flex;
@@ -28,6 +28,13 @@
     color: #7A7A7A;
     font-size: 12px;
     text-transform: capitalize;
+}
+.footer-menu span{
+    cursor: pointer;
+    width: fit-content;
+}
+.footer-menu span:hover{
+    color: #FF9800;
 }
 .newsletter{
     display: flex;
@@ -44,6 +51,7 @@
     outline: none;
     width: 85%;
     height: 100%;
+    padding: 0 20px;
 }
 .newsletter button{
     width: 15%;
@@ -53,7 +61,8 @@
     height: 100%;
 }
 .footer-newsletter p{
-    color:#7A7A7A
+    color:#7A7A7A;
+    font-size: 12px;
 }
 .newsletter-icon{
     font-size: 18px;

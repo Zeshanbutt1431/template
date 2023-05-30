@@ -5,7 +5,6 @@
 }
 .services{
     display: flex;
-    height: 100px;
     align-items: center;
     width: 90%;
 
@@ -15,12 +14,12 @@
     width: 260px;
 }
 .service-container{
-    flex:1;
+    /* flex:1; */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    border-right:1px solid #d3d2d2 ;
+    height: 100px;
+    border-right:1px solid #d3d2d2;
     gap: 10px;
 }
 .service-container:nth-last-child(1){
@@ -28,8 +27,23 @@
 }
 .service-icon{
     font-size: 30px;
+    
+}
+.service-icon:hover{
+    transform:rotate(10deg)
 }
 .service-info{
     font-size: 20px;
     font-weight: 700;
+}
+@media screen and (max-width:991px) {
+    .service-container:nth-child(2){
+        border-right: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .service-container{
+        border-right: none;
+        border-bottom: 1px solid #d3d2d2 ;
+    }
 }

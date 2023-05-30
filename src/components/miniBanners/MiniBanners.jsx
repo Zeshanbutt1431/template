@@ -1,17 +1,18 @@
 import './MiniBanners.css'
-import { minibanners } from '../../data'
+import { minibanners } from '../../data/data'
 import MiniBanner from '../miniBanner/MiniBanner'
+import { Row } from 'react-bootstrap'
 
 
 const MiniBanners = () => {
   return (
-    <div className='minibanners'>
+    <Row className='minibanners'>
       {
         minibanners.map((minibanner)=>(
           <MiniBanner minibanner={minibanner} key={minibanner.id} />
         ))
       }
-    </div>
+    </Row>
   )
 }
 

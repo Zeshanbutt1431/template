@@ -1,12 +1,26 @@
 .brand{
-    border: 1px solid lightgray;
+    border: 1px solid rgb(227, 227, 227);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 180px;
     background-color: #fff;
     filter:  grayscale(100%);
-    opacity: 0.9;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.brand img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height:100%;
+}
+.brand a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 .brand:hover{
     filter: none;

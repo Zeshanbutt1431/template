@@ -1,6 +1,6 @@
 import './FeaturedProducts.css'
 import Slider from "react-slick";
-import { featuredProducts } from '../../data';
+import { featuredProducts } from '../../data/data';
 import FeaturedProduct from '../featuredProduct/FeaturedProduct';
 // import "slick-carousel/slick/slick.css"; 
 // import "slick-carousel/slick/slick-theme.css";
@@ -12,22 +12,27 @@ const FeaturedProducts = ({heading}) => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         initialSlide: 0,
         arrows:true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1700,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 1350,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 991,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -35,7 +40,7 @@ const FeaturedProducts = ({heading}) => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -49,7 +54,7 @@ const FeaturedProducts = ({heading}) => {
                 <h3>{heading}</h3>
                 <div className="slider-buttons">
                     <button onClick={()=>{featureSlide.current.slickPrev()}}><GrPrevious className='slider-btn'/></button>
-                    <button onClick={()=>{featureSlide.current.slickNext()}}><GrNext/></button>
+                    <button onClick={()=>{featureSlide.current.slickNext()}}><GrNext className='slider-btn'/></button>
                 </div>
             </div>
             <Slider ref={featureSlide} {...settings}>

@@ -24,6 +24,7 @@ const FeaturedProduct = ({featured}) => {
             <div className="featuredproduct">
                 <div className="featured-img-container">
                     <img src={featured.img} alt="featured" />
+                    <div className="featured-overlay"></div>
                     {featured.new ? <span className="new">New</span>: " "}
                 </div>
                 <div className="featured-name-price">

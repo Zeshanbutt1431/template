@@ -1,9 +1,10 @@
-.deals-container{
+.deals-container {
     display: flex;
     justify-content: center;
     margin: 80px 0;
 }
-.deals{
+
+.deals {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,30 +13,39 @@
     gap: 40px;
 }
 
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 420px;
 }
-.banner:nth-child(1){
+
+.banner:nth-child(1) {
     flex: 1;
 }
-.banner:nth-last-child(1){
+
+.banner:nth-last-child(1) {
     flex: 1.5;
 }
-.banner-image{
+
+.banner-image {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 420px;
+    position: relative;
 }
-.banner-image img{
+.banner:hover .deal-overlay{
+    opacity: 0.6;
+}
+
+.banner-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.banner-content{
+
+.banner-content {
     position: absolute;
     color: #fff;
     display: flex;
@@ -44,16 +54,48 @@
     height: 100%;
     padding: 5%;
 }
-.banner-content h1{
+
+.banner-content h1 {
     font-weight: 700;
     letter-spacing: 1.5px;
 }
-.banner-content img{
+
+.banner-content img {
     width: 250px;
 }
-.banner:nth-child(1) .banner-content{
+
+.banner:nth-child(1) .banner-content {
     justify-content: flex-end;
 }
-.banner:nth-child(1) .banner-content img{
+
+.banner:nth-child(1) .banner-content img {
     width: 122px;
+}
+
+.deal-overlay {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    transition: all ease-in-out 0.2s;
+
+}
+@media screen and (max-width:768px) {
+    .banner:nth-child(1) {
+        flex: auto;
+    }
+    
+    .banner:nth-last-child(1) {
+        flex: auto;
+
+    }
+    .deals{
+        height: auto;
+    }
+    
 }

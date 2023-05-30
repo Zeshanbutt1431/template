@@ -1,38 +1,42 @@
 import './Navbarcss.css'
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
-import { navItems } from '../../data'
+import { navItems } from '../../data/taxonomycontent'
+import { Link } from 'react-router-dom';
+
 
 const Navbarcss = () => {
+
     return (
-        <div className='navbar'>
+        <div className='navbarcss'>
             <div className="navbar-wrapper">
                 <ul className="navbar-items">
-                    <li className='navbar-item'>SAFETY PRODUCTS
-                        <ul className="menu">
-                            <li className='menu-item'>Menu 1</li>
-                            <li className='menu-item'>Menu 2</li>
-                            <li className='menu-item'>Menu 3</li>
-                            <li className='menu-item'>Menu 4 <IoIosArrowDroprightCircle />
-                                <ul className="sub-menu">
-                                    <li className='sub-menu-item'>Sub-Menu 1</li>
-                                    <li className='sub-menu-item'>Sub-Menu 2</li>
-                                    <li className='sub-menu-item'>Sub-Menu 3</li>
+                    {navItems.map((nav) => (
+                        <Link to={nav.DEPTURL} className='link'>
+                            <li className='navbar-item' key={nav.id}>{nav.DEPT}
+                                <ul className="menu">
+                                    {nav.Type?.map((t) => (
+                                        <Link to={t.TYPURL} className='link'>
+                                            <li className='menu-item' key={t.id}>{t.TYPE} {t.SubType ? <IoIosArrowDroprightCircle /> : ""}
+                                                <ul className="sub-menu">
+                                                    {t.SubType?.map((st) => (
+                                                        <Link to={st.TYPURL} className='link'>
+                                                        <li className='sub-menu-item' key={st.id}>{st.SUBTYPE}</li>
+                                                        </Link>
+                                                    ))}
+                                                </ul>
+                                            </li>
+                                        </Link>
+                                    ))}
                                 </ul>
                             </li>
-                            <li className='menu-item'>Menu 5</li>
-                        </ul>
-                    </li>
-                    {navItems.map(n => (
-                        <li className='navbar-item' key={n.id}>
-                            {n.title}
-                        </li>
+                        </Link>
                     ))}
                 </ul>
-
             </div>
-
         </div>
+
     )
 }
 
 export default Navbarcss
+

@@ -1,16 +1,19 @@
 import Slider from 'react-slick'
-import { brands } from '../../data'
+import { brands } from '../../data/data'
 import Brand from '../brand/Brand';
 import './Brands.css'
+import { Link } from 'react-router-dom';
 
 const Brands = () => {
     var settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 8,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 3000,
 
         responsive: [
           {
@@ -43,7 +46,9 @@ const Brands = () => {
         <div className='brands'>
             <Slider {...settings}> 
                 {brands.map((brand) => (
+                  // <Link to={brand.url}>
                   <Brand brand={brand} key={brand.id}/>
+                  // </Link>
                 ))}
             </Slider>
         </div>

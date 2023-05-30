@@ -12,7 +12,7 @@
     justify-content: center;
     padding: 6px 0;
 
-    
+
 }
 
 .header-container {
@@ -23,7 +23,10 @@
 }
 
 .logo {
-    flex: 1;
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .arrowdown {
@@ -37,9 +40,10 @@
 }
 
 .notification {
-    flex: 1;
+    text-align: center;
     color: #FF9800;
     font-weight: 500;
+    font-size: 14px;
 }
 
 .header-actions {
@@ -47,9 +51,12 @@
     align-items: center;
     gap: 10px;
     justify-content: end;
-    flex: 1;
+    /* flex: 1; */
 }
-
+.search {
+    display: flex;
+    align-items: center;
+}
 .search button {
     background-color: #000;
     outline: none;
@@ -57,8 +64,10 @@
     padding: 5px 9px;
 
 }
+
 .search button:hover {
-    background-color: #FF9800;}
+    background-color: #FF9800;
+}
 
 .search input {
     border: 1px solid lightgray;
@@ -76,6 +85,8 @@
     display: flex;
     height: 35px;
     align-items: center;
+    position: relative;
+
 
 }
 
@@ -89,6 +100,7 @@
     justify-content: center;
     cursor: pointer;
 }
+
 .cart-icon-container:hover {
     background-color: #000;
 }
@@ -116,23 +128,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.account:hover {
+    background-color: #FF9800;
+}
+.account:hover .account-icon {
+    color: #FFF;
 }
 
 .account-icon {
     font-size: 16px;
     color: gray;
+
 }
 
 .header-info {
     display: flex;
     justify-content: center;
-    -webkit-box-shadow:  0px -1px 10px -1px rgba(184, 183, 183, 0.75) inset;
-    -moz-box-shadow:  0px -1px 10px -1px rgba(184, 183, 183, 0.75) inset;
+    -webkit-box-shadow: 0px -1px 10px -1px rgba(184, 183, 183, 0.75) inset;
+    -moz-box-shadow: 0px -1px 10px -1px rgba(184, 183, 183, 0.75) inset;
     box-shadow: 0px -1px 10px -1px rgba(184, 183, 183, 0.75) inset;
     background-color: #fff;
     padding: 14px;
     position: absolute;
-    top:100%;
+    top: 100%;
     z-index: 1;
     right: 0;
     left: 0;
@@ -145,17 +165,44 @@
     justify-content: space-between;
     align-items: center;
 }
-.info{
+
+.info {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: center;
+    border-right: 1px solid #f1f1f1;
 
 }
-.info span{
+.info:nth-last-child(1) {
+    border-right: none
+
+}
+
+.info span {
     font-size: 15px;
     font-weight: 500;
 }
-.info-icon{
+
+.info-icon {
     color: #FF9800;
     font-size: 18px;
+}
+/* MEDIA QURIES ARE ALLOWWD TO WRITE AT THE END OF PAGE ONLY AND DO NOT REPEAT QUERY WITH SAME SCREEN SIZE (E.G USING  max-width:480px for 2 times ) */
+@media screen and (max-width:425px) {
+    .notification {
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:1320px) {
+    .search input {
+        width: 140px;
+    }
+}
+@media screen and (max-width:991px) {
+    .logo, .notification , .header-actions{
+        display: flex;
+        justify-content: center;
+    }
 }

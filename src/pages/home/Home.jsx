@@ -12,7 +12,6 @@ import Services from '../../components/services/Services';
 const Home = (heading) => {
   return (
     <div className='home'>
-      <Header/>
       <MainSliders/>
       <Brands/>
       <MiniBanners/>

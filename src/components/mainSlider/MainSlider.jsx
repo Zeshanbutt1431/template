@@ -1,24 +1,24 @@
-import './MainSlider.css'
 import { Link } from 'react-router-dom';
-
-const MainSlider = (slider) => {
+import Button from '../button/Button';
+import './MainSlider.css'
+const MainSlider = (slide) => {
     return (
         <>
             {/* <Link to="/error" className='link'> */}
                 <div className='mainSlider'>
-                    <img src={slider.img} className="slideImage" alt="slider" />
-                    <div className="sliderContent">
-                        <h1>{slider.heading}</h1>
-                        <p className='sliderDesc'>{slider.desc}</p>
-                        <button>Learn more</button>
+                    <img src={slide.img} alt='slider'/>
+                    <div className={`sliderContent slide${slide.id}` }>
+                        <span className='sliderHeadingSpan'>{slide.headingSpan}</span>
+                        <h1>{slide.heading}</h1>
+                        <p className='sliderDesc'>{slide.desc}</p>
+                        <Link to={slide.ShopNow}><Button>Learn more</Button></Link>
                     </div>
                 </div>
             {/* </Link> */}
-
         </>
 
 
     )
 }
-
+  
 export default MainSlider

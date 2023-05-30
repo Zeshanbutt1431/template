@@ -1,4 +1,5 @@
-.navbar {
+
+.navbarcss {
     background-color: #FF9800;
     display: flex;
     justify-content: center;
@@ -60,21 +61,33 @@
     padding: 0;
     background-color: #FFF;
     top: 127px;
-    animation: slide-top 50ms ease-in-out forwards;
+    animation: nav-slide-top 50ms ease-in-out forwards;
     transform-origin: top center;
     z-index: 1;
+    min-width: 200px;
+    min-height: 50px;
+}
+.menu-item :nth-last-child(1){
+    right: 0;
 }
 
 .menu li {
-    padding: 3px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px 20px;
     margin: 0;
     width: 100%;
     height: 100%;
     transition: all ease-in-out .3s;
 
 }
-
-.menu li:hover {
+.menu a{
+    display: block;
+    width: 100%;
+}
+.menu a:hover>li{
     background-color: #FF9800;
     color: #FFF;
 
@@ -82,9 +95,7 @@
 
 .menu-item {
     color: #9A9A9A;
-    transition: all ease-in-out 1s;
     position: relative;
-
 }
 
 .sub-menu {
@@ -99,7 +110,7 @@
     top: 0;
     left:100%;
     display: none;
-    /* width: 200px; */
+    width: 200px; 
     white-space: nowrap;
 
 }
@@ -113,6 +124,7 @@
     height: 100%;
     transition: all ease-in-out .3s;
     color: #9A9A9A;
+    white-space: wrap;
 }
 
 .sub-menu li:hover {
@@ -123,7 +135,7 @@
     display: block;
 }
 
-@-webkit-keyframes slide-top {
+@-webkit-keyframes nav-slide-top {
     0% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -135,7 +147,7 @@
     }
 }
 
-@keyframes slide-top {
+@keyframes nav-slide-top {
     0% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
